@@ -1,0 +1,355 @@
+/*----------RESER CSS----------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+	box-sizing: border-box;
+}
+/*----------END RESER CSS----------*/
+
+html, body{
+	font-size: 14;
+	line-height: 1.2;
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #FFFBF9;
+}
+.container{
+	width: 1680px;
+	margin: 0 auto;
+}
+@media (min-width: 1600) {
+	.container{
+		width: 1400px;
+	}
+}
+@media (min-width: 1200) {
+	.container{
+		width: 1100px;
+	}
+}
+@media (min-width: 992) {
+	.container{
+		width: 962px;
+	}
+}
+@media (min-width: 768) {
+	.container{
+		width: 728px;
+	}
+}
+@media (min-width: 480) {
+	.container{
+		width: 440px;
+	}
+}
+/* fonts styles */
+@font-face {
+	font-family: AvantGarde Bk BT;
+	src: url(./fonts/AvantGardeBookBT.ttf);
+}
+@font-face {
+	font-family: AvantGarde Dm BT;
+	src: url(./fonts/AvantGardeDemiBT.ttf);
+}
+@font-face {
+	font-family: AvantGarde Dm Obl BT;
+	src: url(./fonts/AvantGardeDemiObliqueBT.ttf);
+}
+@font-face {
+	font-family: Avgardn;
+	src: url(./fonts/AVGARDN.TTF);
+}
+@font-face {
+	font-family: Avgardni;
+	src: url(./fonts/AVGARDNI.ttf);
+}
+
+/* header-main styles */
+.header-main .container{
+	padding: 15px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+}
+.header-main nav a{
+	font-family: 'AvantGarde Bk BT';
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	color: #E2BDAF;
+	text-decoration: none;
+	margin-right: 50px;
+}
+.header-main nav a:last-child{
+	margin: 0;
+}
+.header-main nav a:hover{
+	text-decoration: underline;
+}
+.save-off{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	padding: 8px 0;
+	text-align: center;
+	align-items: center;
+	background: #FE6F61;
+	width: 100%;
+	font-family: 'AvantGarde Bk BT';
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+/* order-now styles */
+.order-now{
+	padding: 83px 0 120px;
+}
+.product-desc{
+	width: 513px;
+}
+.title1 h1{
+	font-family: 'AvantGarde Bk BT';
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 36px;
+	text-transform: uppercase;
+	color: #E2BDAF;
+}
+.title2 h2{
+	font-family: 'AvantGarde Bk BT';
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	color: #E2BDAF;
+}
+.star-rating{
+	display: flex;
+}
+.star-rating li {
+	display: block;
+	font-size: 25px;
+	font-family: Arial !important;
+	position: relative;
+	color: #FE6F61;
+	margin-right: 5px;
+}
+.star-rating .star-f::before{
+	content: "★";
+}
+.star-rating .star-h::before{
+	content: "★";
+}
+.star-rating i{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	font-style: normal;
+}
+.star-rating i::before{
+	content: "☆";
+}
+.star-rating i:after {
+	content: "";
+	background: #fff;
+	width: 50%;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	z-index: -1;
+}
+.star-rating .star-e::before{
+	content: "☆";
+}
+.box{
+	display: flex;
+	align-items: center;
+	padding: 10px 0 20px;
+	border-bottom: 1px solid #E5E5E5;
+}
+.box p{
+	font-family: 'AvantGarde Bk BT';
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 18px;
+	color: #FE6F61;
+	margin-left: 10px;
+}
+.desc{
+	font-family: 'AvantGarde Bk BT';
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 18px;
+	color: #707070;
+	margin: 21px 0 25px;
+}
+.buttons{
+	border: 1px solid #E5E5E5;
+	border-radius: 10px;
+	padding: 4px;
+}
+.buttons button{
+	font-family: 'AvantGarde Bk BT';
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: center;
+	border: 0;
+}
+.buttons button:first-child{
+	color: #FFFFFF;
+	background: #E2BDAF;
+	border-radius: 10px;
+	padding: 6px 54px;
+}
+.buttons button:last-child{
+	color: #E2BDAF;
+	background: none;
+	padding: 6px 63px;
+}
+.price-list{
+	padding-top: 78px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+}
+.lists{
+	margin-right: 21px;
+}
+.lists:last-child{
+	margin: 0;
+}
+.ellipse{
+	position: absolute;
+	margin-top: -36px;
+	margin-left: 43px;
+	padding: 14px 0;
+	background: #E2BDAF;
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	font-family: 'AvantGarde Bk BT';
+	font-weight: 600;
+	text-align: center;
+	color: #FFFFFF;
+}
+.ellipse h1{
+	font-size: 20px;
+	line-height: 24px;
+}
+.ellipse h2{
+	font-size: 15px;
+	line-height: 18px;
+}
+.col{
+	background: #FFFBF9;
+	border: 1px solid #E5E5E5;
+	border-radius: 10px;
+	justify-content: center;
+	text-align: center;
+	font-family: 'AvantGarde Bk BT';
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: center;
+	color: #707070;
+	width: 157px;
+}
+.lists .col h1 b{
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 36px;
+}
+.col-titles{
+	padding: 57px 0 22px;
+}
+.col .bg-change{
+	padding: 20px 0;
+	background: #E2BDAF;
+	border-radius: 0px 0px 10px 10px;
+}
+.col .bg-change button{
+	border: none;
+	padding: 6px 19px;
+	border-radius: 0px 0px 10px 10px;
+	background: #FE6F61;
+	border-radius: 10px;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 18px;
+	color: #FFFFFF;
+	margin-bottom: 10px;
+}
+.col .bg-change p{
+	font-size: 10px;
+	line-height: 12px;
+	text-transform: lowercase;
+	color: #FFFBF9;
+}
+.list2 .col .bg-change{
+	padding: 20px 0 30px;
+}
+.col .value{
+	background: #FE6F61;
+	width: 50px;
+	transform: rotate(45deg);
+	font-size: 7px;
+	line-height: 8px;
+	color: #FFFBF9;
+	transform: rotate(-45deg);
+}
+.cream-product{
+	display: flex;
+}

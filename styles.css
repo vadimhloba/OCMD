@@ -216,7 +216,7 @@ body{
 .star-rating .star-e::before{
 	content: "☆";
 }
-.box{
+.order-now .box{
 	display: flex;
 	align-items: center;
 	padding: 10px 0 20px;
@@ -346,6 +346,9 @@ body{
 }
 .list2 .col .bg-change{
 	padding: 20px 0 30px;
+}
+.order-now .cream{
+	padding: 20px 0 0 20px;
 }
 .bg-product{
 	display: block;
@@ -543,22 +546,92 @@ body{
 	color: #707070;
 	margin-bottom: 20px;
 }
-.text-left .desc:last-child p,
-.text-right .desc:last-child p{
+.questions .post .text-left .desc:last-child p,
+.questions .post .text-right .desc:last-child p{
 	margin-bottom: 0;
 }
-.text-left .desc:first-child h1,
-.text-right .desc:first-child h1{
+.questions .post .text-left .desc:first-child h1,
+.questions .post .text-right .desc:first-child h1{
 	margin-top: 0;
 }
 .questions .img-post{
 	padding: 0 16px;
 }
-.text-left .desc,
-.text-right .desc{
+.questions .post .text-left .desc,
+.questions .post .text-right .desc{
 	border-bottom: 1px solid #E5E5E5;
 }
-.text-left .desc:last-child,
-.text-right .desc:last-child{
+.questions .post .text-left .desc:last-child,
+.questions .post .text-right .desc:last-child{
 	border-bottom: none;
 }
+
+/* section ageing styles */
+.ageing .container{
+	padding: 120px 0;
+}
+.ageing{
+	font-family: 'AvantGarde Bk BT';
+	background: #E2BDAF;
+}
+.ageing h1{
+	color: #FFFBF9;
+}
+.ageing .title{
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 36px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+.ageing .post{
+	display: flex;
+	justify-content: center;
+}
+.ageing .post .post-img{
+	display: grid;
+}
+.ageing .post .post-img .box{
+	display: inline-flex;
+	align-items: center;
+}
+.ageing .post .post-img .box.right svg{
+	margin: 50px 15px 50px 44px;
+}
+.ageing .post .post-img .box.left svg{
+	margin: 50px 44px 50px 15px;
+}
+.ageing .post .text-left{
+	text-align: right;
+}
+.ageing .post .text-left .desc,
+.ageing .post .text-right .desc{
+	width: 400px;
+}
+.ageing .post .text-left .desc.wrap1{margin-top: 198px;}
+
+.ageing .post .text-right .desc.wrap1{margin-top: 14px;}
+
+.ageing .post .text-left .desc.wrap2{margin-top: 235px;}
+
+.ageing .post .text-right .desc.wrap2{margin-top: 226px;}
+
+.ageing .post .text-left .desc.wrap3{margin-top: 245px;}
+
+.ageing .post .text-right .desc.wrap3{margin-top: 246px;}
+
+.ageing .post .text-left .desc h1,
+.ageing .post .text-right .desc h1{
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	margin-bottom: 10px;
+}
+.ageing .post .text-left .desc p,
+.ageing .post .text-right .desc p{
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 18px;
+}
+
+/* section results styles */

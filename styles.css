@@ -907,6 +907,21 @@ body{
 	font-family: 'AvantGarde Bk BT';
 	color: #FFFBF9;
 }
+.videos .bg-pic1{
+	position: absolute;
+	left: 230px;
+	margin-top: -40px;
+}
+.videos .bg-pic2{
+	position: absolute;
+	left: 1060px;
+	margin-top: 340px;
+}
+.videos .bg-pic3{
+	position: absolute;
+	left: 230px;
+	margin-top: 1400px;
+}
 .videos .title{
 	text-align: center;
 	font-weight: 600;

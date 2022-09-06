@@ -1021,10 +1021,6 @@ body{
 	padding: 20px 20px 16px 20px;
 	box-sizing: border-box;
 }
-@media (max-width: 1200px) {
-	.videos .col{
-	}
-}
 .videos .col button{
 	position: absolute;
 	left: 50%;

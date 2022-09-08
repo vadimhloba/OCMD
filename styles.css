@@ -129,6 +129,11 @@ body{
 	width: 132.83px;
 	height: auto;
 }
+@media (max-width: 992px) {
+	.header-main .logo img{
+		width: 160px;
+	}
+}
 .header-main nav a{
 	font-family: 'AvantGarde Bk BT';
 	font-weight: 400;
@@ -142,6 +147,23 @@ body{
 	.header-main nav a{
 		font-size: 22px;
 		line-height: 26px;
+	}
+}
+@media (max-width: 992px) {
+	.header-main nav{
+		display: none;
+	}
+}
+.header-main .menu-nav{
+	display: none;
+}
+@media (max-width: 992px) {
+	.header-main .menu-nav{
+		display: block;
+	}
+	.header-main .menu-nav svg{
+		width: 40px;
+		height: auto;
 	}
 }
 .header-main nav a:last-child{
@@ -165,16 +187,49 @@ body{
 	text-transform: uppercase;
 	color: #FFFFFF;
 }
+@media (max-width: 1200px) {
+	.save-off div:nth-child(4n){
+		display: none;
+	}
+	.save-off{
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media (max-width: 992px) {
+	.save-off div:nth-child(3n){
+		display: none;
+	}
+	.save-off{
+		grid-template-columns: repeat(2, 1fr);
+		font-size: 24px;
+    line-height: 37px;
+	}
+}
 
 /* section order-now styles */
 .order-now{
 	padding: 83px 0 120px;
 }
+@media (max-width: 992px) {
+	.order-now{
+		padding: 50px 0 60px;
+	}
+}
 .order-now .container{
 	display: flex;
 }
+@media (max-width: 992px) {
+	.order-now .container{
+		display: block;
+	}
+}
 .order-now .product-desc{
 	width: 513px;
+}
+@media (max-width: 992px) {
+	.order-now .product-desc{
+		width: 100%;
+	}
 }
 .order-now .title1 h1{
 	font-family: 'AvantGarde Bk BT';
@@ -184,6 +239,12 @@ body{
 	text-transform: uppercase;
 	color: #E2BDAF;
 }
+@media (max-width: 992px) {
+	.order-now .title1 h1{
+		font-size: 42px;
+    line-height: 56px;
+	}
+}
 .order-now .title2 h2{
 	font-family: 'AvantGarde Bk BT';
 	font-weight: 400;
@@ -191,16 +252,27 @@ body{
 	line-height: 24px;
 	color: #E2BDAF;
 }
+@media (max-width: 992px) {
+	.order-now .title2 h2{
+		font-size: 26px;
+    line-height: 32px;
+	}
+}
 .order-now .star-rating{
 	display: flex;
 }
-.order-now .star-rating li {
+.order-now .star-rating li{
 	display: block;
 	font-size: 25px;
 	font-family: Arial !important;
 	position: relative;
 	color: #FE6F61;
 	margin-right: 5px;
+}
+@media (max-width: 992px) {
+	.order-now .star-rating li{
+		font-size: 35px;
+	}
 }
 .order-now .star-rating li:hover{
 	cursor: pointer;
@@ -240,6 +312,11 @@ body{
 	padding: 10px 0 20px;
 	border-bottom: 1px solid #E5E5E5;
 }
+@media (max-width: 992px) {
+	.order-now .box{
+		padding: 3px 0;
+	}
+}
 .order-now .box p{
 	font-family: 'AvantGarde Bk BT';
 	font-weight: 400;
@@ -248,6 +325,12 @@ body{
 	color: #FE6F61;
 	margin-left: 10px;
 }
+@media (max-width: 992px) {
+	.order-now .box p{
+		font-size: 19px;
+    line-height: 22px;
+	}
+}
 .order-now .desc{
 	font-family: 'AvantGarde Bk BT';
 	font-weight: 400;
@@ -255,6 +338,12 @@ body{
 	line-height: 18px;
 	color: #707070;
 	margin: 21px 0 25px;
+}
+@media (max-width: 992px) {
+	.order-now .desc{
+		font-size: 22px;
+    line-height: 27px;
+	}
 }
 .order-now .buttons{
 	border: 1px solid #E5E5E5;
@@ -269,16 +358,32 @@ body{
 	text-align: center;
 	border: 0;
 }
+@media (max-width: 992px) {
+	.order-now .buttons button{
+		font-size: 26px;
+    line-height: 29px;
+	}
+}
 .order-now .buttons button:first-child{
 	color: #FFFFFF;
 	background: #E2BDAF;
 	border-radius: 10px;
 	padding: 6px 54px;
 }
+@media (max-width: 992px) {
+	.order-now .buttons button:first-child{
+		padding: 6px 94px;
+	}
+}
 .order-now .buttons button:last-child{
 	color: #E2BDAF;
 	background: none;
 	padding: 6px 63px;
+}
+@media (max-width: 992px) {
+	.order-now .buttons button:last-child{
+		padding: 6px 105px;
+	}
 }
 .order-now .buttons button:hover{
 	cursor: pointer;
@@ -309,6 +414,12 @@ body{
 	text-align: center;
 	color: #FFFFFF;
 }
+@media (max-width: 992px) {
+	.order-now .lists .ellipse{
+		width: 100px;
+		height: 100px;
+	}
+}
 .order-now .lists .ellipse h1{
 	font-size: 20px;
 	line-height: 24px;
@@ -330,6 +441,11 @@ body{
 	text-align: center;
 	color: #707070;
 	width: 157px;
+}
+@media (max-width: 992px) {
+	.order-now .lists .col{
+		width: 100%;
+	}
 }
 .order-now .lists .col h1 b{
 	font-weight: 600;
@@ -394,6 +510,11 @@ body{
 		height: 460px;
 	}
 }
+@media (max-width: 992px) {
+	.order-now .bg-product .bg-ellipse1{
+		margin-left: 0;
+	}
+}
 .order-now .bg-product .bg-ellipse2{
 	position: absolute;
 	margin-left: 150px;
@@ -402,6 +523,11 @@ body{
 	.order-now .bg-product .bg-ellipse2{
 		width: 420px;
 		height: 460px;
+	}
+}
+@media (max-width: 992px) {
+	.order-now .bg-product .bg-ellipse2{
+		margin-left: 30px;
 	}
 }
 .order-now .slides .bg-cream1{
@@ -415,6 +541,11 @@ body{
 		height: 350px;
 	}
 }
+@media (max-width: 992px) {
+	.order-now .slides .bg-cream1{
+		margin-left: 50px;
+	}
+}
 .order-now .slides .cream1{
 	position: absolute;
 	margin-left: 207px;
@@ -425,6 +556,11 @@ body{
 		width: 315px;
 		height: 390px;
 		margin-left: 202px;
+	}
+}
+@media (max-width: 992px) {
+	.order-now .slides .cream1{
+		margin-left: 82px;
 	}
 }
 .order-now .slide2, .slide3{
@@ -443,6 +579,11 @@ body{
 		margin: 0 20px 0 0;
 		top: 81%;
 		right: 0;
+	}
+}
+@media (max-width: 992px) {
+	.order-now .controls{
+		margin: 0;
 	}
 }
 .order-now .controls button{
@@ -1018,19 +1159,20 @@ body{
 .videos .bg-pic2{
 	position: absolute;
 	right: 0;
+	width: 714px;
+	height: auto;
 	margin-top: 340px;
 }
 @media (max-width: 1200px) {
 	.videos .bg-pic2{
-		right: 0;
-		width: 580px;
-		margin-top: 300px;
-	}
+		width: 614px;
+    margin-top: 244px;
 }
 .videos .bg-pic3{
 	position: absolute;
 	left: 0;
 	margin-top: 1400px;
+}
 }
 @media (max-width: 1200px) {
 	.videos .bg-pic3{

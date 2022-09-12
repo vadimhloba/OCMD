@@ -60,6 +60,12 @@ html, body{
 }
 body{
 	background: #FFFBF9;
+	overflow-x: hidden;
+}
+img{
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 .container{
 	width: 100%;
@@ -187,7 +193,7 @@ body{
 	text-transform: uppercase;
 	color: #FFFFFF;
 }
-@media (max-width: 1200px) {
+@media(max-width: 1200px) {
 	.save-off div:nth-child(4n){
 		display: none;
 	}
@@ -195,7 +201,7 @@ body{
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
-@media (max-width: 992px) {
+@media(max-width: 992px) {
 	.save-off div:nth-child(3n){
 		display: none;
 	}
@@ -210,28 +216,21 @@ body{
 .order-now{
 	padding: 83px 0 120px;
 }
-@media (max-width: 992px) {
-	.order-now{
-		padding: 50px 0 0 0;
-    height: 1320px;
-	}
-}
-.order-now .container{
-	display: flex;
-}
-@media (max-width: 992px) {
+@media(min-width:992px){
 	.order-now .container{
-		display: block;
+		display: flex;
+		justify-content: space-between;
 	}
 }
-.order-now .product-desc{
-	width: 513px;
+.order-now .product-desc, .order-now .cream{
+	width: 100%;
 }
-@media (max-width: 992px) {
-	.order-now .product-desc{
-		width: 100%;
+@media(min-width:992px){
+	.order-now .product-desc, .order-now .cream{
+		width: 50%;
 	}
 }
+
 .order-now .title1 h1{
 	font-family: 'AvantGarde Bk BT';
 	font-weight: 600;
@@ -240,7 +239,7 @@ body{
 	text-transform: uppercase;
 	color: #E2BDAF;
 }
-@media (max-width: 992px) {
+@media(max-width: 992px) {
 	.order-now .title1 h1{
 		font-size: 42px;
     line-height: 56px;
@@ -344,7 +343,6 @@ body{
 	.order-now .desc{
 		font-size: 22px;
     line-height: 27px;
-		margin-top: 602px;
 	}
 }
 .order-now .buttons{
@@ -397,13 +395,17 @@ body{
 	align-items: center;
 	grid-column-gap: 21px;
 }
+.order-now .lists{
+	position: relative;
+}
 .order-now .lists:last-child{
 	margin: 0;
 }
 .order-now .lists .ellipse{
 	position: absolute;
-	margin-top: -36px;
-	margin-left: 43px;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
 	padding: 14px 0;
 	background: #E2BDAF;
 	border-radius: 50%;
@@ -439,7 +441,6 @@ body{
 	line-height: 18px;
 	text-align: center;
 	color: #707070;
-	width: 157px;
 }
 @media (max-width: 992px) {
 	.order-now .lists .col{
@@ -487,104 +488,51 @@ body{
 	padding: 20px 0 30px;
 }
 .order-now .cream{
-	padding: 20px 0 0 20px;
+	position: relative;
 }
-@media (max-width: 1200px) {
-	.order-now .cream{
-		padding-top: 45px;
-	}
-}
-@media (max-width: 992px) {
-	.order-now .cream{
-		margin-top: -1060px;
-		transform: translate(20%, 20%);
-		position: relative;
-	}
-}
-.order-now .bg-product{
-	display: block;
-	z-index: 1;
-}
-.order-now .bg-product .bg-ellipse1{
-	position: absolute;
-	margin-top: -40px;
-	margin-left: 120px;
-}
-@media (max-width: 1200px) {
-	.order-now .bg-product .bg-ellipse1{
-		width: 420px;
-		height: 460px;
-	}
-}
-@media (max-width: 992px) {
-	.order-now .bg-product .bg-ellipse1{
-		margin-left: 0;
-	}
-}
-.order-now .bg-product .bg-ellipse2{
-	position: absolute;
-	margin-left: 150px;
-}
-@media (max-width: 1200px) {
-	.order-now .bg-product .bg-ellipse2{
-		width: 420px;
-		height: 460px;
-	}
-}
-@media (max-width: 992px) {
-	.order-now .bg-product .bg-ellipse2{
-		margin-left: 30px;
-	}
-}
-.order-now .slides .cream1{
-	position: absolute;
+.order-now .cream-bg{
 	width: 100%;
+	position: relative;
 }
-@media (max-width: 1200px) {
-	.order-now .slides .cream1{
-		width: 315px;
-		height: 390px;
-	}
+.order-now .cream-bg img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
-@media (max-width: 992px) {
-	.order-now .slides .cream1{
-		margin-left: 82px;
-	}
+.order-now .cream-bg img:last-child{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	top: 30px;
 }
-.order-now .slide2, .slide3{
-	display: none;
+.order-now .slider-img{
+	width: 375px;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
 }
-.order-now .controls{
+.order-now .slider-controls{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-column-gap: 30px;
 	position: absolute;
-	margin-left: 516px;
-	margin-top: 471px;
+	right: 0;
+	bottom: 0;
 }
-@media (max-width: 1200px) {
-	.order-now .controls{
-		margin: 0 20px 0 0;
-		top: 81%;
-		right: 0;
-	}
-}
-@media (max-width: 992px) {
-	.order-now .controls{
-		margin: 0;
-		top: 510px;
-    padding-right: 61%;
-	}
-}
-.order-now .controls button{
+.order-now .slider-controls button{
 	border: 1px solid #FE6F61;
-	width: 30px; height: 30px;
+	width: 30px;
+	height: 30px;
 	border-radius: 50%;
 	background: none;
+	position: relative;
 }
-.order-now .controls button img{
+.order-now .slider-controls button img{
 	position: absolute;
-	margin-left: -33px;
+	left: -50%; top: 50%;
 }
 .order-now .cream button:hover{
 	background: #FE6F61;

@@ -212,7 +212,8 @@ body{
 }
 @media (max-width: 992px) {
 	.order-now{
-		padding: 50px 0 60px;
+		padding: 50px 0 0 0;
+    height: 1320px;
 	}
 }
 .order-now .container{
@@ -343,6 +344,7 @@ body{
 	.order-now .desc{
 		font-size: 22px;
     line-height: 27px;
+		margin-top: 602px;
 	}
 }
 .order-now .buttons{
@@ -393,9 +395,7 @@ body{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	align-items: center;
-}
-.order-now .lists{
-	margin-right: 21px;
+	grid-column-gap: 21px;
 }
 .order-now .lists:last-child{
 	margin: 0;
@@ -416,8 +416,7 @@ body{
 }
 @media (max-width: 992px) {
 	.order-now .lists .ellipse{
-		width: 100px;
-		height: 100px;
+		transform: translate(80%, 0);
 	}
 }
 .order-now .lists .ellipse h1{
@@ -495,6 +494,13 @@ body{
 		padding-top: 45px;
 	}
 }
+@media (max-width: 992px) {
+	.order-now .cream{
+		margin-top: -1060px;
+		transform: translate(20%, 20%);
+		position: relative;
+	}
+}
 .order-now .bg-product{
 	display: block;
 	z-index: 1;
@@ -530,32 +536,14 @@ body{
 		margin-left: 30px;
 	}
 }
-.order-now .slides .bg-cream1{
-	position: absolute;
-	margin-left: 170px;
-	margin-top: 45px;
-}
-@media (max-width: 1200px) {
-	.order-now .slides .bg-cream1{
-		width: 380px;
-		height: 350px;
-	}
-}
-@media (max-width: 992px) {
-	.order-now .slides .bg-cream1{
-		margin-left: 50px;
-	}
-}
 .order-now .slides .cream1{
 	position: absolute;
-	margin-left: 207px;
-	margin-top: 15px;
+	width: 100%;
 }
 @media (max-width: 1200px) {
 	.order-now .slides .cream1{
 		width: 315px;
 		height: 390px;
-		margin-left: 202px;
 	}
 }
 @media (max-width: 992px) {
@@ -584,6 +572,8 @@ body{
 @media (max-width: 992px) {
 	.order-now .controls{
 		margin: 0;
+		top: 510px;
+    padding-right: 61%;
 	}
 }
 .order-now .controls button{

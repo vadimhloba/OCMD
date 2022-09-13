@@ -548,27 +548,80 @@ img{
 	display: flex;
 	align-items: center;
 }
-.product .save-product .icon{background: no-repeat;}
+.product .save-product{
+	position: relative;
+	margin-right: 95px;
+	width: 45%;
+}
+.product .save-cream img{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.product .save-product .icon{
+	position: absolute;
+	background: no-repeat;
+}
 .product .save-product .icon1{
 	background-image: url(./img/product/bg-save1.png); 
-	width: 96.5px; height: 81.28px;
+	width: 96.5px;
+	height: 81.28px;
+	top: 0;
+	left: 0;
+	transform: translate(72%, 43%);
 }
 .product .save-product .icon2{
 	background-image: url(./img/product/bg-save2.png);
-	width: 80.28px; height: 99.08px;
+	width: 80.28px;
+	height: 99.08px;
+	top: 0;
+	left: 0;
+	transform: translate(-16%, 122%);
 }
 .product .save-product .icon3{
 	background-image: url(./img/product/bg-save3.png);
-	width: 86px; height: 78.31px;
+	width: 86px;
+	height: 78.31px;
+	bottom: 0;
+	right: 0;
+	transform: translate(26%, -90%);
 }
 .product .save-product .icon4{
 	background-image: url(./img/product/bg-save4.png);
-	width: 79.01px; height: 83.28px;
+	width: 84.01px;
+	height: 87.28px;
+	bottom: 0;
+	right: 0;
+	transform: translate(-95%, 24%);
+}
+.product .save-product .icon1 img{
+	transform: translate(71%, 50%);
+}
+.product .save-product .icon2 img{
+	transform: translate(50%, 71%);
+}
+.product .save-product .icon3 img{
+	transform: translate(56%, 46%);
+}
+.product .save-product .icon4 img{
+	transform: translate(64%, 57%);
+}
+.save-product .icons .icon p{
+	bottom: 0;
+	left: 0;
+	transform: translate(16%, 130%);
+	position: absolute;
+	width: 75px;
+	text-align: center;
+	font-family: 'AvantGarde Bk BT';
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 12px;
+	color: #707070;
 }
 .product .desc{
+	width: 55%;
 	font-family: 'AvantGarde Bk BT';
-	margin-left: 110px; 
-	margin-top: 70px;
 }
 .product .desc .main-desc h1{
 	font-weight: 700;
@@ -576,7 +629,6 @@ img{
 	line-height: 36px;
 	color: #FFFBF9;
 	margin-bottom: 40px;
-	width: 500px;
 }
 .product .desc .main-desc p{
 	font-weight: 400;
@@ -609,41 +661,6 @@ img{
 .product .desc button:hover{
 	cursor: pointer;
 }
-.save-product .icons .icon{
-	position: absolute;
-	width: auto; 
-	height: auto;
-}
-.save-product .icons .icon1{
-	margin: -425px 0 0 90px;
-}
-.save-product .icons .icon2{
-	margin: -338px 0 0 -10px;
-}
-.save-product .icons .icon3{
-	margin: -155px 0 0 398px;
-}
-.save-product .icons .icon4{
-	margin: -73px 0 0 290px;
-}
-.save-product .icons .icon1 img{padding: 21px 28.5px 20.26px 28px;}
-.save-product .icons .icon2 img{padding: 30px 22.79px 32.22px 18.79px;}
-.save-product .icons .icon3 img{padding: 19px 24px 19.31px 22px;}
-.save-product .icons .icon4 img{padding: 23.65px 20.87px 22.24px 23px;}
-.save-product .icons .icon p{
-	position: relative;
-	width: 75px;
-	text-align: center;
-	font-family: 'AvantGarde Bk BT';
-	font-weight: 400;
-	font-size: 10px;
-	line-height: 12px;
-	color: #707070;
-}
-.save-product .icons .icon1 p{margin: 10px 0 0 10px;}
-.save-product .icons .icon2 p{margin-top: 8px;}
-.save-product .icons .icon3 p{margin: 5px 0 0 8px;}
-.save-product .icons .icon4 p{margin-top: 10px;}
 
 /* section questions style */
 .questions{
@@ -667,10 +684,12 @@ img{
 	justify-content: center;
 }
 .questions .post .text-left{
+	width: calc(100% / 3);
 	text-align: right;
 	width: 238px;
 }
 .questions .post .text-right{
+	width: calc(100% / 3);
 	text-align: left;
 	width: 238px;
 }
@@ -781,27 +800,19 @@ img{
 /* section results styles */
 .results{
 	padding: 120px 0 106px;
+	position: relative;
 }
-.results .bg-ill{
-	background-image: url(./img/results/bg-ill.png);
-	width: 710px;
-	height: 654px;
-	margin-left: 668px;
-	margin-top: -120px;
+.results .bg-ill img{
 	z-index: -1;
 	position: absolute;
-}
-@media (min-width: 1200px) {
-	.results .bg-ill{
-		right: 0;
-		margin: 0;
-		margin-top: -120px;
-		width: 698px;
-	}
+	right: 0;
+	top: 0;
 }
 .results .post{
 	display: flex;
 	align-items: center;
+	position: relative;
+	width: 100%;
 }
 .results .descr{
 	margin-right: 40px;
@@ -828,14 +839,16 @@ img{
 	padding: 120px 0 80px;
 	background: #E2BDAF;
 	font-family: 'AvantGarde Bk BT';
+	position: relative;
 }
 .ingredients h1{
 	color: #FFFBF9;
 }
-.ingredients .ellipse{
+.ingredients .ellipse img{
 	position: absolute;
-	margin-left: -120px;
-	margin-top: 196px;
+	bottom: 0;
+	left: 0;
+	transform: translate(16%, 0);
 }
 @media (max-width: 1200px) {
 	.ingredients .ellipse{
@@ -936,7 +949,11 @@ img{
 	display: flex;
 }
 .customer .post-img{
+	width: 50%;
 	margin-right: 40px;
+}
+.customer .post{
+	width: 50%;
 }
 .customer .post .title{
 	font-weight: 600;
@@ -1078,44 +1095,23 @@ img{
 	background: #E2BDAF;
 	font-family: 'AvantGarde Bk BT';
 	color: #FFFBF9;
+	position: relative;
 }
-.videos .bg-pic1{
+.videos .bg-pic1 img{
 	position: absolute;
-	left: 230px;
-	margin-top: -40px;
+	top: 0;
+	left: 0;
+	transform: translate(60%, 15%);
 }
-@media (max-width: 1440px) {
-	.videos .bg-pic1{
-		left: 0;
-	}
-}
-@media (max-width: 1200px) {
-	.videos .bg-pic1{
-		left: -25px;
-	}
-}
-.videos .bg-pic2{
+.videos .bg-pic2 img{
 	position: absolute;
 	right: 0;
-	width: 714px;
-	height: auto;
-	margin-top: 340px;
+	transform: translate(0, 30%);
 }
-@media (max-width: 1200px) {
-	.videos .bg-pic2{
-		width: 614px;
-    margin-top: 244px;
-}
-.videos .bg-pic3{
+.videos .bg-pic3 img{
 	position: absolute;
+	bottom: 0;
 	left: 0;
-	margin-top: 1400px;
-}
-}
-@media (max-width: 1200px) {
-	.videos .bg-pic3{
-		margin-top: 1235px;
-	}
 }
 .videos .title{
 	text-align: center;

@@ -76,12 +76,12 @@ img{
 }
 @media(min-width:480px){
 	.container{
-		width: 400px;
+		width: 460px;
 	}
 }
 @media(min-width:768px){
 	.container{
-		width: 700px;
+		width: 760px;
 	}
 }
 @media(min-width:992px){
@@ -135,11 +135,6 @@ img{
 	width: 132.83px;
 	height: auto;
 }
-@media (max-width: 992px) {
-	.header-main .logo img{
-		width: 160px;
-	}
-}
 .header-main nav a{
 	font-family: 'AvantGarde Bk BT';
 	font-weight: 400;
@@ -149,27 +144,27 @@ img{
 	text-decoration: none;
 	margin-right: 50px;
 }
-@media (max-width: 1200px) {
-	.header-main nav a{
-		font-size: 22px;
-		line-height: 26px;
-	}
-}
-@media (max-width: 992px) {
+@media (min-width: 480px) {
 	.header-main nav{
 		display: none;
+	}
+}
+@media (min-width: 768px) {
+	.header-main nav{
+		display: block;
 	}
 }
 .header-main .menu-nav{
 	display: none;
 }
-@media (max-width: 992px) {
+@media (min-width: 480px) {
 	.header-main .menu-nav{
 		display: block;
 	}
-	.header-main .menu-nav svg{
-		width: 40px;
-		height: auto;
+}
+@media (min-width: 768px) {
+	.header-main .menu-nav{
+		display: none;
 	}
 }
 .header-main nav a:last-child{
@@ -193,24 +188,6 @@ img{
 	text-transform: uppercase;
 	color: #FFFFFF;
 }
-@media(max-width: 1200px) {
-	.save-off div:nth-child(4n){
-		display: none;
-	}
-	.save-off{
-		grid-template-columns: repeat(3, 1fr);
-	}
-}
-@media(max-width: 992px) {
-	.save-off div:nth-child(3n){
-		display: none;
-	}
-	.save-off{
-		grid-template-columns: repeat(2, 1fr);
-		font-size: 24px;
-    line-height: 37px;
-	}
-}
 
 /* section order-now styles */
 .order-now{
@@ -230,7 +207,6 @@ img{
 		width: 50%;
 	}
 }
-
 .order-now .title1 h1{
 	font-family: 'AvantGarde Bk BT';
 	font-weight: 600;
@@ -239,24 +215,12 @@ img{
 	text-transform: uppercase;
 	color: #E2BDAF;
 }
-@media(max-width: 992px) {
-	.order-now .title1 h1{
-		font-size: 42px;
-    line-height: 56px;
-	}
-}
 .order-now .title2 h2{
 	font-family: 'AvantGarde Bk BT';
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 24px;
 	color: #E2BDAF;
-}
-@media (max-width: 992px) {
-	.order-now .title2 h2{
-		font-size: 26px;
-    line-height: 32px;
-	}
 }
 .order-now .star-rating{
 	display: flex;
@@ -268,11 +232,6 @@ img{
 	position: relative;
 	color: #FE6F61;
 	margin-right: 5px;
-}
-@media (max-width: 992px) {
-	.order-now .star-rating li{
-		font-size: 35px;
-	}
 }
 .order-now .star-rating li:hover{
 	cursor: pointer;
@@ -312,11 +271,6 @@ img{
 	padding: 10px 0 20px;
 	border-bottom: 1px solid #E5E5E5;
 }
-@media (max-width: 992px) {
-	.order-now .box{
-		padding: 3px 0;
-	}
-}
 .order-now .box p{
 	font-family: 'AvantGarde Bk BT';
 	font-weight: 400;
@@ -324,12 +278,6 @@ img{
 	line-height: 18px;
 	color: #FE6F61;
 	margin-left: 10px;
-}
-@media (max-width: 992px) {
-	.order-now .box p{
-		font-size: 19px;
-    line-height: 22px;
-	}
 }
 .order-now .desc{
 	font-family: 'AvantGarde Bk BT';
@@ -339,18 +287,15 @@ img{
 	color: #707070;
 	margin: 21px 0 25px;
 }
-@media (max-width: 992px) {
-	.order-now .desc{
-		font-size: 22px;
-    line-height: 27px;
-	}
-}
 .order-now .buttons{
+	display: flex;
+	width: 100%;
 	border: 1px solid #E5E5E5;
 	border-radius: 10px;
 	padding: 4px;
 }
 .order-now .buttons button{
+	width: 50%;
 	font-family: 'AvantGarde Bk BT';
 	font-weight: 400;
 	font-size: 15px;
@@ -358,32 +303,16 @@ img{
 	text-align: center;
 	border: 0;
 }
-@media (max-width: 992px) {
-	.order-now .buttons button{
-		font-size: 26px;
-    line-height: 29px;
-	}
-}
 .order-now .buttons button:first-child{
 	color: #FFFFFF;
 	background: #E2BDAF;
 	border-radius: 10px;
-	padding: 6px 54px;
-}
-@media (max-width: 992px) {
-	.order-now .buttons button:first-child{
-		padding: 6px 94px;
-	}
+	padding: 6px 0;
 }
 .order-now .buttons button:last-child{
 	color: #E2BDAF;
 	background: none;
-	padding: 6px 63px;
-}
-@media (max-width: 992px) {
-	.order-now .buttons button:last-child{
-		padding: 6px 105px;
-	}
+	padding: 6px 0;
 }
 .order-now .buttons button:hover{
 	cursor: pointer;
@@ -415,11 +344,6 @@ img{
 	font-weight: 600;
 	text-align: center;
 	color: #FFFFFF;
-}
-@media (max-width: 992px) {
-	.order-now .lists .ellipse{
-		transform: translate(80%, 0);
-	}
 }
 .order-now .lists .ellipse h1{
 	font-size: 20px;

@@ -381,6 +381,26 @@ img{
 }
 .order-now .col2 .col-titles{
 	padding: 57px 0 42px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.order-now .col2 .col-titles::after{
+	content: 'Best value';
+	position: absolute;
+	background: #FE6F61;
+	font-family: 'AvantGarde Bk BT';
+	font-weight: 400;
+	font-size: 7px;
+	line-height: 8px;
+	text-align: center;
+	color: #FFFBF9;
+	padding: 1px 15px;
+	top: 0;
+	left: 0;
+	transform: rotate(-45deg) translate(-29%);
+	text-transform: uppercase;
 }
 .order-now .col .bg-change{
 	padding: 20px 0;
@@ -612,6 +632,10 @@ img{
 	text-align: right;
 	width: 238px;
 }
+.questions .img-post img{
+	width: 100%;
+	padding: 0 16px;
+}
 .questions .post .text-right{
 	width: calc(100% / 3);
 	text-align: left;
@@ -640,9 +664,6 @@ img{
 .questions .post .text-right .desc:first-child h1{
 	margin-top: 0;
 }
-.questions .img-post{
-	padding: 0 16px;
-}
 .questions .post .text-left .desc,
 .questions .post .text-right .desc{
 	border-bottom: 1px solid #E5E5E5;
@@ -670,51 +691,38 @@ img{
 	text-align: center;
 	margin-bottom: 40px;
 }
-.ageing .post{
+.ageing .post-wrap .point{
 	display: flex;
-	justify-content: center;
-}
-.ageing .post .post-img{
-	display: grid;
-}
-.ageing .post .post-img .box{
-	display: inline-flex;
 	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 40px;
 }
-.ageing .post .post-img .box.right svg{
-	margin: 50px 15px 50px 44px;
+.ageing .post-wrap .point:last-child{
+	margin: 0;
 }
-.ageing .post .post-img .box.left svg{
-	margin: 50px 44px 50px 15px;
+.ageing .post-wrap .point .pic.pic-left{
+	margin-left: auto;
 }
-.ageing .post .text-left{
-	text-align: right;
+.ageing .post-wrap .point .pic.pic-right{
+	margin-right: auto;
 }
-.ageing .post .text-left .desc,
-.ageing .post .text-right .desc{
-	width: 400px;
+.ageing .post-wrap .point .number svg{
+	margin: 0 22px;
 }
-.ageing .post .text-left .desc.wrap1{margin-top: 198px;}
-
-.ageing .post .text-right .desc.wrap1{margin-top: 14px;}
-
-.ageing .post .text-left .desc.wrap2{margin-top: 235px;}
-
-.ageing .post .text-right .desc.wrap2{margin-top: 226px;}
-
-.ageing .post .text-left .desc.wrap3{margin-top: 245px;}
-
-.ageing .post .text-right .desc.wrap3{margin-top: 246px;}
-
-.ageing .post .text-left .desc h1,
-.ageing .post .text-right .desc h1{
+.ageing .post-wrap .desc{
+	flex: 1 calc(50% - 137.5px);
+	max-width: calc(50% - 137.5px);
+}
+.ageing .point:nth-child(2n),
+.ageing .point:nth-child(4n),
+.ageing .point:nth-child(6n){text-align: right;}
+.ageing .point .desc h1{
 	font-weight: 700;
 	font-size: 20px;
 	line-height: 24px;
 	margin-bottom: 10px;
 }
-.ageing .post .text-left .desc p,
-.ageing .post .text-right .desc p{
+.ageing .post-wrap .desc p{
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 18px;
@@ -764,6 +772,8 @@ img{
 	background: #E2BDAF;
 	font-family: 'AvantGarde Bk BT';
 	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
 }
 .ingredients h1{
 	color: #FFFBF9;
@@ -875,6 +885,9 @@ img{
 .customer .post-img{
 	width: 50%;
 	margin-right: 40px;
+}
+.customer .post-img img{
+	width: 100%;
 }
 .customer .post{
 	width: 50%;

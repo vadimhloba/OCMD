@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, user-scalable=no, user-scalable=0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
 	<link rel="stylesheet" href="./styles.css">
+	<link rel="preload" href="./script.js" as="script">
 	<title>OCMD2+</title>
 </head>
 <body>
@@ -700,12 +701,6 @@
 			</div>
 			<p>2021 © OCMD. All rights reserved.</p>
 		</footer>
-	<script>
-		const menuButton = document.querySelector('.menu-nav')
-		const headerNav = document.querySelector('.header-main nav')
-		menuButton.addEventListener('click', () => {
-			headerNav.classList.add('active')
-		})
-	</script>
+		<script src="./script.js"></script>
 </body>
 </html>

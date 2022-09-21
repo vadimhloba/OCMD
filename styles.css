@@ -809,7 +809,14 @@ img{
 @media (min-width: 768px) {
 	.ageing .post-wrap .point .pic{
 		width: 140px;
-		padding-right: 10px;
+	}
+}
+.ageing .post-wrap .point .pic.pic-left{
+	padding-right: 20px;
+}
+@media (min-width: 768px) {
+	.ageing .post-wrap .point .pic.pic-left{
+		padding-right: 0;
 	}
 }
 .ageing .post-wrap .point .pic.pic-left img{
@@ -820,6 +827,14 @@ img{
 		margin-left: auto;
 	}
 }
+.ageing .post-wrap .point .pic.pic-right{
+	padding-left: 20px;
+}
+@media (min-width: 768px) {
+	.ageing .post-wrap .point .pic.pic-right{
+		padding-left: 0;
+	}
+}
 .ageing .post-wrap .point .pic.pic-right img{
 	margin-right: auto;
 }
@@ -828,20 +843,38 @@ img{
 		margin-right: auto;
 	}
 }
+.ageing .post-wrap .point .number.right{
+	text-align: left;
+	padding-left: 30px;
+}
+@media (min-width: 768px) {
+	.ageing .post-wrap .point .number.right{
+		padding-left: 0;
+		margin-left: 10px;
+	}
+}
+.ageing .post-wrap .point .number.left{
+	text-align: right;
+	padding-right: 30px;
+}
+@media (min-width: 768px) {
+	.ageing .post-wrap .point .number.left{
+		padding-right: 0;
+		margin-right: 10px;
+	}
+}
 .ageing .post-wrap .point .number{
 	width: 50%;
 	font-weight: 700;
 	font-size: 100px;
 	line-height: 119px;
 	color: #fffbf9;
-	text-align: center;
-	padding: 0 30px;
 }
 @media (min-width: 768px) {
 	.ageing .post-wrap .point .number{
 		width: 135px;
 		padding: 0;
-		padding: 0 15px;
+		order: 0;
 	}
 }
 .ageing .post-wrap .desc{
@@ -857,11 +890,11 @@ img{
 	}
 }
 .ageing .point .right{
-	text-align-last: center;
+	text-align: center;
 }
 @media (min-width: 768px) {
 	.ageing .point .right{
-		text-align-last: left;
+		text-align: left;
 	}
 }
 .ageing .point .left{
@@ -1274,12 +1307,11 @@ img{
 }
 .videos .bg-pic1 img{
 	position: absolute;
-	top: 2%;
+	top: 1%;
 	left: 0;
 }
 @media (min-width: 1600px) {
 	.videos .bg-pic1 img{
-		top: 1%;
 		left: 5%;
 	}
 }
@@ -1294,9 +1326,25 @@ img{
 	}
 }
 .videos .bg-pic2 img{
+	display: none;
 	position: absolute;
 	right: 0;
 	transform: translate(0, 25%);
+}
+@media (min-width: 768px) {
+	.videos .bg-pic2 img{
+		display: block;
+	}
+}
+.bg-pic2--mob{
+	position: absolute;
+	right: 0;
+	transform: translate(0, 246%);
+}
+@media (min-width: 768px) {
+	.videos .bg-pic2--mob img{
+		display: none;
+	}
 }
 .videos .bg-pic3 img{
 	position: absolute;

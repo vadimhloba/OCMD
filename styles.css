@@ -117,6 +117,20 @@ img{
 }
 
 /* header-main styles */
+@media (max-width: 767px) {
+	.header-main{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 100;
+		background: white;
+		box-shadow:0 0 8px rgba(0, 0, 0, .4);
+	}
+	body{
+		padding-top: 65px;
+	}
+}
 .header-main .container{
 	padding: 15px 10px;
 	display: flex;
@@ -146,13 +160,13 @@ img{
 .header-main nav.active{
 	position: fixed;
 	left: 0;
-	top: 0;
+	top: 65px;
 	width: 100%;
-	height: 100vh;
-	z-index: 100;
+	height: calc(100vh - 65px);
+	z-index: 3;
 	display: flex;
 	flex-direction: column;
-	background: purple;
+	background: white;
 	justify-content: flex-start;
 }
 .header-main nav.active a{
@@ -184,6 +198,8 @@ img{
 	text-decoration: none;
 	background: none;
 	cursor: pointer;
+	position: relative;
+	z-index: 5;
 }
 @media (min-width: 768px) {
 	.header-main .menu-nav{

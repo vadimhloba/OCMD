@@ -94,6 +94,7 @@ img{
 		width: 1190px;
 	}
 }
+
 /* fonts styles */
 @font-face {
 	font-family: AvantGarde Bk BT;
@@ -157,19 +158,28 @@ img{
 		display: flex;
 	}
 }
+@media (max-width: 768px) {
+	.header-main nav{
+		position: fixed;
+    background: #fffbf9;
+    transition: .4s ease-in-out;
+    top: 64px;
+    height: calc(100vh - 64px);
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 1s ease,opacity .5s ease;
+    padding: 78px 0 0 20px;
+	}
+}
 .header-main nav.active{
-	position: fixed;
-	left: 0;
-	top: 65px;
-	width: 100%;
-	height: calc(100vh - 65px);
-	z-index: 3;
-	display: flex;
-	flex-direction: column;
-	background: white;
-	justify-content: flex-start;
+	max-height: calc(100vh - 64px);
+	opacity: 1;
 }
 .header-main nav.active a{
+	position: relative;
 	margin: 0;
 	max-width: 150px;
 	font-size: 20px;
@@ -192,8 +202,24 @@ img{
 		line-height: 24px;
 	}
 }
-.header-main .menu-nav{
+.nav{
 	display: block;
+}
+.nav-active.active button:before{
+	content: "+";
+	display: block;
+	position: absolute;
+	color: #e2bdaf;
+	font-weight: 300;
+	transform: scale(5) rotate(45deg);
+	line-height: 1;
+	left: -20px;
+	top: -10px;
+}
+.nav-active.active button svg{
+	display: none;
+}
+.header-main .menu-nav{
 	border: 0;
 	text-decoration: none;
 	background: none;

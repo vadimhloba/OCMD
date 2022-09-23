@@ -1,7 +1,6 @@
 const menuButton = document.querySelector('.menu-nav')
 const headerNav = document.querySelector('.header-main nav')
-const buttonActive = document.querySelector('.header-main .button-active')
-menuButton.addEventListener('click', () => {
+menuButton.addEventListener('click', e => {
 	headerNav.classList.toggle('active')
-	buttonActive.classList.toggle('active')
+	e.target.classList.toggle('active')
 })

@@ -149,50 +149,41 @@ img{
 		width: 132.83px;
 	}
 }
-.header-main nav{
-	display: none;
-	justify-content: flex-end;
-}
+
 @media (min-width: 768px) {
 	.header-main nav{
 		display: flex;
+		justify-content: flex-end;
 	}
 }
 @media (max-width: 767px) {
-	.header-main nav.active{
+	.header-main nav{
+		visibility: hidden;
+		overflow: 0;
 		position: fixed;
-		display: block;
 		left: 0;
 		top: 64px;
-		height: 100vh;
+		max-height: 0px;
 		background: #fffbf9;
 		height: calc(100vh - 64px);
 		width: 100%;
-		padding: 78px 0 0 20px;
+		transition: 1s ease;
+		overflow: hidden;
 	}
-	.header-main nav.active a{
-		position: relative;
-		font-weight: 600;
-		flex-direction: row;
-		display: flex;
-		margin: 0;
-		max-width: 150px;
-		font-size: 20px;
-		line-height: 24px;
-		text-transform: uppercase;
-		color: #E2BDAF;
-		margin-top: 20px;
+	.header-main nav.active{
+		opacity: 1;
+		visibility: visible;
+		max-height: calc(100vh - 64px);
+		padding-top: 50px;
 	}
-	.header-main nav.active a:last-child{
-		margin-top: 20px;
-	}
+
 }
 .header-main nav img{
 	bottom: 0;
 	left: 0;
 }
 @media (min-width: 768px){
-	.header-main nav picture{
+	.header-main nav img{
 		display: none;
 	}
 }
@@ -224,7 +215,7 @@ img{
 	max-width: 100%;
 	visibility: hidden;
 	opacity: 0;
-	transition: .5s ease;
+	transition: opacity .5s ease 1s;
 }
 .header-main nav a{
 	font-family: 'AvantGarde Bk BT';
@@ -242,7 +233,25 @@ img{
 		line-height: 24px;
 	}
 }
-.header-main .button-active.active button::after{
+@media (max-width: 767px) {
+	.header-main nav a{
+		display: block;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 24px;
+		text-transform: uppercase;
+		margin-right: 0;
+		text-align: left;
+		padding-left: 20px;
+		padding-right: 20px;
+		position: relative;
+		z-index: 2;
+	}
+	.header-main nav a:not(:first-child){
+		margin-top: 20px;
+	}
+}
+.header-main .menu-nav.active::after{
 	content: "+";
 	display: block;
 	position: absolute;
@@ -254,7 +263,7 @@ img{
 	line-height: 1;
 }
 @media (max-width: 767px) {
-	.header-main .button-active.active button svg{
+	.header-main .menu-nav.active svg{
 		display: none;
 	}
 }
@@ -276,6 +285,9 @@ img{
 }
 .header-main nav a:hover{
 	text-decoration: underline;
+}
+.header-main .menu-nav svg{
+	pointer-events: none;
 }
 .save-off{
 	display: grid;

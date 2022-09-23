@@ -186,35 +186,43 @@ img{
 	.header-main nav.active a:last-child{
 		margin-top: 20px;
 	}
-	.header-main nav.active img{
-		display: block;
-		bottom: 0;
-		left: 0;
-	}
-	.header-main nav.active .nav-bg{
-		width: 1056px;
-		max-width: 1056px;
-		height: auto;
-		position: fixed;
-		left: 50%;
-		bottom: 0;
-		transform: translate(-50%, 30%);
-		z-index: 1;
-	}
-	.header-main nav.active .nav-image{
-		position: absolute;
-		z-index: 2;
-		bottom: 0;
-		left: 50%;
-		transform: translate(-50%);
-		height: auto;
-		max-width: 100%;
-	}
 }
-@media (min-width: 768px) {
+.header-main nav.active img{
+	bottom: 0;
+	left: 0;
+}
+.header-main nav.active picture{
+	visibility: visible;
+	opacity: 1;
+}
+.header-main nav picture{
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .5s ease 1s;
+}
+@media (min-width: 768px){
 	.header-main nav picture{
 		display: none;
 	}
+}
+.header-main nav.active .nav-bg{
+	width: 1056px;
+	max-width: 1056px;
+	height: auto;
+	position: fixed;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%, 30%);
+	z-index: 1;
+}
+.header-main nav.active .nav-image{
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%);
+	height: auto;
+	max-width: 100%;
 }
 .header-main nav a{
 	font-family: 'AvantGarde Bk BT';

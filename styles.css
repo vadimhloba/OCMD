@@ -187,7 +187,7 @@ img{
 		margin-top: 20px;
 	}
 }
-.header-main picture img.active{
+.header-main nav img{
 	bottom: 0;
 	left: 0;
 }

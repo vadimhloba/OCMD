@@ -21,7 +21,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -126,7 +125,6 @@ img{
 		width: 100%;
 		z-index: 100;
 		background: white;
-		box-shadow:0 0 8px rgba(0, 0, 0, .4);
 	}
 	body{
 		padding-top: 65px;
@@ -289,10 +287,14 @@ img{
 .header-main .menu-nav svg{
 	pointer-events: none;
 }
+
+/* section save-off styles */
 .save-off{
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	padding: 8px 0;
+	overflow: hidden;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
 	text-align: center;
 	align-items: center;
 	background: #FE6F61;
@@ -303,6 +305,23 @@ img{
 	line-height: 24px;
 	text-transform: uppercase;
 	color: #FFFFFF;
+}
+.save-off div{
+	display: flex;
+}
+.save-off p{
+	width: 100%;
+	white-space: nowrap;
+	animation: marque 3s linear infinite;
+	padding: 0 30px;
+}
+@keyframes marque {
+	0%{
+		transform: translateX(0%);
+	}
+	100%{
+		transform: translateX(-100%);
+	}
 }
 
 /* section order-now styles */
@@ -659,6 +678,9 @@ img{
 	position: relative;
 	margin: 0;
 }
+.product .save-product.active{
+	display: block;
+}
 @media (min-width: 992px) {
 	.product .save-product{
 		width: 45%;
@@ -670,41 +692,65 @@ img{
 	width: 100%;
 	height: 100%;
 }
+.product .save-product .icons button{
+	position: absolute;
+	cursor: pointer;
+	border: none;
+	background: none;
+}
+.product .save-product .first{
+	top: 7%;
+	left: 15%;
+}
+.product .save-product .second{
+	top: 25%;
+	left: -3%;
+}
+.product .save-product .third{
+	bottom: 32%;
+	right: 16%;
+}
+.product .save-product .fourth{
+	bottom: 15%;
+	right: 38%;
+}
 .product .save-product .icon{
 	position: absolute;
 	background: no-repeat;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.product .save-product .icon:hover{
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+@media (min-width: 992px) {
+	.product .save-product .icon:hover{
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+	}
 }
 .product .save-product .icon1{
 	background-image: url(./img/product/bg-save1.png); 
 	width: 96.5px;
 	height: 81.28px;
-	top: 0;
-	left: 0;
-	transform: translate(72%, 43%);
 }
 .product .save-product .icon2{
 	background-image: url(./img/product/bg-save2.png);
 	width: 80.28px;
 	height: 99.08px;
-	top: 0;
-	left: 0;
-	transform: translate(-16%, 122%);
 }
 .product .save-product .icon3{
 	background-image: url(./img/product/bg-save3.png);
 	width: 86px;
 	height: 78.31px;
-	bottom: 0;
-	right: 0;
-	transform: translate(26%, -90%);
 }
 .product .save-product .icon4{
 	background-image: url(./img/product/bg-save4.png);
 	width: 84.01px;
 	height: 87.28px;
-	bottom: 0;
-	right: 0;
-	transform: translate(-95%, 24%);
 }
 .product .save-product .icon1 img{
 	transform: translate(71%, 50%);
@@ -1669,10 +1715,8 @@ img{
 }
 
 /* footer styles */
-.footer-main{
-	background: #FE6F61;
-}
 .footer-main .wrapper{
+	background: #FE6F61;
 	padding: 15px;
 	display: flex;
 	flex-direction: column;
@@ -1738,12 +1782,19 @@ img{
 	padding: 14px 0;
 	text-align: center;
 }
-.footer p{
+
+/* section text-under styles */
+.text-under{
+	display: block;
+	width: 100%;
+	padding: 14px 0 30px;
+}
+.text-under p{
+	text-align: center;
 	font-family: 'AvantGarde Bk BT';
 	font-weight: 400;
 	font-size: 10px;
 	line-height: 12px;
 	text-transform: uppercase;
 	color: #707070;
-	text-decoration: none;
 }

@@ -603,6 +603,7 @@ img{
 }
 .order-now .cream.tab-desk{
 	display: none;
+	margin-left: 40px;
 }
 @media (min-width: 992px) {
 	.order-now .cream.tab-desk{
@@ -618,7 +619,17 @@ img{
 	position: relative;
 }
 .order-now .cream-bg svg{
-	transform: translate(8%, 4%);
+	transform: translate(-14%, 4%);
+}
+@media (min-width: 576x) {
+	.order-now .cream-bg svg{
+		transform: translate(-8%, 4%);
+	}
+}
+@media (min-width: 768px) {
+	.order-now .cream-bg svg{
+		transform: translate(8%, 4%);
+	}
 }
 @media (min-width: 992px) {
 	.order-now .cream-bg svg{

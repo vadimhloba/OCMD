@@ -671,6 +671,7 @@ img{
 .order-now .slider-controls button img{
 	position: absolute;
 	left: -50%; top: 50%;
+	pointer-events: none;
 }
 .order-now .cream button:hover{
 	background: #FE6F61;
@@ -710,40 +711,28 @@ img{
 		margin-right: 95px;
 	}
 }
+.product .save-product *{
+	pointer-events: none;
+}
 .product .save-cream img{
 	position: relative;
 	width: 100%;
 	height: 100%;
 }
-.product .save-product .icons button{
+/*.product .save-product .icons button{
 	position: absolute;
 	cursor: pointer;
 	border: none;
 	background: none;
-}
-.product .save-product .first{
-	top: 7%;
-	left: 15%;
-}
-.product .save-product .second{
-	top: 25%;
-	left: -3%;
-}
-.product .save-product .third{
-	bottom: 32%;
-	right: 16%;
-}
-.product .save-product .fourth{
-	bottom: 15%;
-	right: 38%;
-}
+}*/
+
 .product .save-product .icon{
 	position: absolute;
 	background: no-repeat;
 	-webkit-transform: scale(1);
 	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+	-webkit-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
 }
 .product .save-product .icon:hover{
 	-webkit-transform: scale(1.3);
@@ -759,22 +748,48 @@ img{
 	background-image: url(./img/product/bg-save1.png); 
 	width: 96.5px;
 	height: 81.28px;
+	top: 7%;
+	left: 15%;
 }
 .product .save-product .icon2{
 	background-image: url(./img/product/bg-save2.png);
 	width: 80.28px;
 	height: 99.08px;
+	top: 25%;
+	left: -3%;
 }
 .product .save-product .icon3{
 	background-image: url(./img/product/bg-save3.png);
 	width: 86px;
 	height: 78.31px;
+	top: 65%;
+	left: 80%;
 }
 .product .save-product .icon4{
 	background-image: url(./img/product/bg-save4.png);
 	width: 84.01px;
 	height: 87.28px;
+	top: 80%;
+	left: 60%;
 }
+
+.product .save-product.active .icon4{
+	top: 7%;
+	left: 15%;
+}
+.product .save-product.active .icon3{
+	top: 25%;
+	left: -3%;
+}
+.product .save-product.active .icon2{
+	top: 65%;
+	left: 80%;
+}
+.product .save-product.active .icon1{
+	top: 80%;
+	left: 60%;
+}
+
 .product .save-product .icon1 img{
 	transform: translate(71%, 50%);
 }

@@ -23,14 +23,14 @@ sliderBtn.forEach(button => {
     e.preventDefault();
     sliderBtn.forEach(btn => btn.classList.remove('active'))
     e.target.classList.add('active')
-		sliderAction1.setAttribute('src', e.target.dataset.src)
-		sliderAction2.setAttribute('src', e.target.dataset.src)
+		sliderAction1.classList.add('active')
+		sliderAction2.classList.add('active')
+		setTimeout(() => {
+			sliderAction1.setAttribute('src', e.target.dataset.src)
+			sliderAction1.classList.remove('active')
+			sliderAction2.setAttribute('src', e.target.dataset.src)
+			sliderAction2.classList.remove('active')
+		}, 750);
   })
 })
 /* -----END slider------ */
-
-/*
-1 mouse click
-2 take data-src from e.target
-3 put data-src to the image
-*/

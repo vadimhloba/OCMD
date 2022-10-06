@@ -672,6 +672,7 @@ img{
 	background: none;
 	position: relative;
 	margin-left: 30px;
+	cursor: pointer;
 }
 .order-now .slider-controls button.active{
 	background: #FE6F61;
